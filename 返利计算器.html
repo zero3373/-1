@@ -10,29 +10,32 @@
             background-color: #f4f4f8;
             color: #333;
             margin: 0;
-            padding: 10px;
+            padding: 10px; /* added padding around the entire page */
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: flex-start; /* changed from center to flex-start to align the content to the top */
             min-height: 100vh;
-            width: 100%;
+            width: 100%; /* ensure the body takes full width */
         }
         .container {
             background: #fff;
-            padding: 20px 40px;
+            padding: 20px 40px; /* increased padding for better spacing inside the container */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 50%;
-            max-width: 600px;
-            min-width: 320px;
+            width: 100%; /* responsive width */
+            max-width: 960px; /* increased max width for larger displays */
         }
         h2 {
             color: #333;
             text-align: center;
         }
+        .half-width {
+            width: 50%; /* input fields and buttons take half the width of their parent */
+            margin: auto; /* centers the element within its container */
+        }
         input[type="number"], #amountInputs p {
-            width: 100%;
-            box-sizing: border-box;
+            width: 100%; /* Make input fields take the full width of their parent */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
         }
         input[type="number"] {
             padding: 8px;
@@ -41,9 +44,7 @@
             border-radius: 4px;
             display: block;
         }
-
         button {
-            width: 100%;
             padding: 10px;
             margin-top: 10px;
             background-color: #4CAF50;
@@ -68,15 +69,15 @@
 <body>
     <div class="container">
         <h2>返利计算器</h2>
-        <input type="number" placeholder="主推荐人当月消费金额" id="mainAmountInput">
-        <button onclick="addRecommendation()">添加推荐人</button>
-        <div id="amountInputs">
+        <input type="number" class="half-width" placeholder="主推荐人当月消费金额" id="mainAmountInput">
+        <button class="half-width" onclick="addRecommendation()">添加推荐人</button>
+        <div id="amountInputs" class="half-width">
             <p>
                 <input type="number" placeholder="第一级被推荐人消费金额" id="amountInput0">
                 <input type="number" placeholder="第二级被推荐人数量" id="numSecondLevelInput0">
             </p>
         </div>
-        <button onclick="calculateRebate()">计算返利</button>
+        <button class="half-width" onclick="calculateRebate()">计算返利</button>
         <div id="rebateDetails"></div>
     </div>
 
