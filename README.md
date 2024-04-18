@@ -22,17 +22,20 @@
             padding: 20px 40px; /* increased padding for better spacing inside the container */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 90%; /* responsive width */
+            width: 100%; /* responsive width */
             max-width: 960px; /* increased max width for larger displays */
         }
         h2 {
             color: #333;
             text-align: center;
         }
+        input[type="number"], #amountInputs p {
+            width: 100%; /* Make input fields take the full width of their parent */
+            box-sizing: border-box; /* Include padding and border in the element's total width and height */
+        }
         input[type="number"] {
-            width: calc(100% - 12px);
             padding: 8px;
-            margin: 5px 0;
+            margin: 5px 0 5px 0;
             border: 1px solid #ccc;
             border-radius: 4px;
             display: block;
