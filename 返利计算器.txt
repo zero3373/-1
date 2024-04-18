@@ -22,8 +22,9 @@
             padding: 20px 40px; /* increased padding for better spacing inside the container */
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 100%; /* responsive width */
-            max-width: 960px; /* increased max width for larger displays */
+            width: 50%; /* set width to 50% of the view width */
+            max-width: 600px; /* maximum width to avoid being too wide on large screens */
+            min-width: 320px; /* minimum width to ensure usability on smaller screens */
         }
         h2 {
             color: #333;
